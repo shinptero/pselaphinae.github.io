@@ -6,84 +6,66 @@
 <title>生態 — Pselaphinae of Japan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+JP:wght@400;500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 <header class="site-header">
-  <div class="header-inner">
-    <div class="header-top">
-      <div>
-        <div class="site-title"><a href="index.html"><i>Pselaphinae</i> of Japan</a></div>
-        <div class="site-subtitle">アリヅカムシ亜科の分類・形態・生態</div>
-      </div>
-      <button class="menu-toggle" onclick="document.querySelector('.site-nav').classList.toggle('open')">Menu</button>
-    </div>
-    <nav class="site-nav">
-      <ul>
-        <li><a href="index.html">トップ</a></li>
-        <li><a href="taxonomy.html">分類体系</a></li>
-        <li><a href="morphology.html">形態</a></li>
-        <li><a href="ecology.html" class="current">生態</a></li>
-        <li><a href="japan.html">日本産種</a></li>
-        <li><a href="methods.html">採集法</a></li>
-        <li><a href="literature.html">文献</a></li>
-      </ul>
-    </nav>
-  </div>
+  <button class="hamburger" onclick="toggleSidebar()"><svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></button>
+  <a href="index.html" class="site-logo"><span class="logo-icon">P</span> Pselaphinae of Japan</a>
 </header>
-
-<section class="page-hero">
-  <div class="container">
-    <p class="taxon-path">トップ › 生態</p>
-    <h1>生態と生物間相互作用</h1>
-    <p class="subtitle">Ecology & Biotic Interactions</p>
-  </div>
-</section>
-
-<main class="page-body">
-  <div class="container">
+<div class="layout">
+  <nav class="sidebar" id="sidebar">
+    <ul class="sidebar-nav">
+      <li><a href="index.html">Top</a></li>
+      <li class="sidebar-section">分類・形態</li>
+      <li><a href="taxonomy.html">分類体系</a></li>
+      <li><a href="morphology.html">形態的特徴</a></li>
+      <li class="sidebar-section">生態・分布</li>
+      <li><a href="ecology.html" class="current">生態と生物間相互作用</a></li>
+      <li><a href="japan.html">日本産種</a></li>
+      <li class="sidebar-section">調査・文献</li>
+      <li><a href="methods.html">採集・調査法</a></li>
+      <li><a href="literature.html">主要文献</a></li>
+    </ul>
+  </nav>
+  <div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
+  <main class="main"><div class="content">
+    <div class="page-title">
+      <h1>生態と生物間相互作用</h1>
+      <div class="sub">Ecology & Biotic Interactions</div>
+    </div>
     <div class="prose">
-      <p>
-        アリヅカムシ類は成虫・幼虫ともに捕食性で、トビムシ（Collembola）やササラダニ（Oribatida）などの微小無脊椎動物を主な餌とする。一部の種の幼虫は腹部腺から粘性物質を分泌し、体毛上に付着させて獲物を粘着捕獲するという特異な捕食法が観察されている（De Marzo, 1986）。別種の幼虫では、頭部前方の突出可能な粘着器官でトビムシを捕らえる行動も報告されている（De Marzo, 1988）。
-      </p>
-      <p>
-        本亜科の生態学的に最も注目される側面は、社会性昆虫との共生関係（好蟻性 myrmecophily）の多様な進化である。好蟻性は高等アリヅカムシ類の複数系統で独立に生じており、Clavigeritae 上族では全種が絶対好蟻性に至っている。
-      </p>
-
+      <p>アリヅカムシ類は成虫・幼虫ともに捕食性で、トビムシ（Collembola）やササラダニ（Oribatida）などの微小無脊椎動物を主な餌とします。一部の種の幼虫は腹部腺から粘性物質を分泌し、体毛上に付着させて獲物を粘着捕獲するという特異な捕食法が観察されています（De Marzo, 1986）。別種の幼虫では頭部前方の突出可能な粘着器官でトビムシを捕らえる行動も報告されています（De Marzo, 1988）。</p>
+      <p>本亜科の生態学的に最も注目される側面は、社会性昆虫との共生関係（好蟻性 myrmecophily）の多様な進化です。好蟻性は高等アリヅカムシ類の複数系統で独立に生じており、Clavigeritae 上族では全種が絶対好蟻性に至っています。</p>
       <h2>主要な生態学的トピック</h2>
     </div>
-
     <div class="card-grid">
       <div class="card">
         <h3>落葉層・土壌生態系</h3>
-        <p>森林のリター層における微小捕食者として、分解系食物網の構成要素を成す。飛翔能力が低く分散が制限されるため狭域固有種が多く、老齢林で種多様性が高い傾向が報告されており、森林の成熟度指標としての可能性が議論されている。</p>
+        <p>リター層の微小捕食者として分解系食物網の構成要素を成す。飛翔能力が低く分散が制限されるため狭域固有種が多い。老齢林で種多様性が高い傾向があり、森林の成熟度指標としての可能性が議論されている。</p>
       </div>
       <div class="card">
         <h3>好蟻性 Myrmecophily</h3>
-        <p>Clavigeritae の全種はアリの巣に依存する絶対共生者。体表のトリコームから宿主を誘引する物質を分泌し、口移しでの給餌（trophallaxis）を受ける。Batrisitae 等にも随意好蟻性種が散在し、好蟻性は本亜科内で複数回独立に進化したと推定される。</p>
+        <p>Clavigeritae の全種はアリの巣に依存する絶対共生者。体表のトリコームから宿主を誘引する物質を分泌し、口移しでの給餌（trophallaxis）を受ける。Batrisitae 等にも随意好蟻性種が散在。</p>
       </div>
       <div class="card">
         <h3>狭域固有性と生物地理</h3>
-        <p>微小な体サイズと飛翔能力の制約により、島嶼・山岳地での種分化が活発。日本列島では地史的隔離を反映した固有種が多数知られ、生物地理学的研究の好材料となる。白亜紀ビルマ琥珀（約 9,900 万年前）からの化石が高等アリヅカムシ類の古い起源を証明している。</p>
+        <p>微小な体サイズと飛翔能力の制約により島嶼・山岳地での種分化が活発。日本列島では地史的隔離を反映した固有種が多数知られる。白亜紀琥珀（約9,900万年前）からの化石が高等アリヅカムシ類の古い起源を示す。</p>
       </div>
       <div class="card">
         <h3>地下浅層・洞窟適応</h3>
-        <p>MSS（Milieu souterrain superficiel: 地下浅層環境）や洞窟に適応した種群が知られる。眼の退化・体色淡化・付属肢の伸長など典型的な troglomorphy を示し、生物地理学・進化生物学の研究対象としても重要。</p>
+        <p>MSS や洞窟に適応した種群で眼の退化・体色淡化・付属肢の伸長など典型的な troglomorphy が観察される。生物地理学・進化生物学の研究対象として重要。</p>
       </div>
     </div>
-
     <nav class="page-nav">
       <div><span class="label">← 前</span><a href="morphology.html">形態的特徴</a></div>
       <div style="text-align:right;"><span class="label">次 →</span><a href="japan.html">日本産種</a></div>
     </nav>
   </div>
-</main>
-
-<footer class="site-footer">
-  <p>本サイトはアリヅカムシ亜科の研究・学習のための情報提供を目的としています。</p>
-  <p class="copy">&copy; 2026 Pselaphinae of Japan</p>
-</footer>
+  <footer class="site-footer" style="margin-left:0;"><p>&copy; 2026 Pselaphinae of Japan. All Rights Reserved.</p></footer>
+  </main>
+</div>
+<script>function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('overlay').classList.toggle('open');}</script>
 </body>
 </html>

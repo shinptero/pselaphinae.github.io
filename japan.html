@@ -6,74 +6,49 @@
 <title>日本産種 — Pselaphinae of Japan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+JP:wght@400;500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 <header class="site-header">
-  <div class="header-inner">
-    <div class="header-top">
-      <div>
-        <div class="site-title"><a href="index.html"><i>Pselaphinae</i> of Japan</a></div>
-        <div class="site-subtitle">アリヅカムシ亜科の分類・形態・生態</div>
-      </div>
-      <button class="menu-toggle" onclick="document.querySelector('.site-nav').classList.toggle('open')">Menu</button>
-    </div>
-    <nav class="site-nav">
-      <ul>
-        <li><a href="index.html">トップ</a></li>
-        <li><a href="taxonomy.html">分類体系</a></li>
-        <li><a href="morphology.html">形態</a></li>
-        <li><a href="ecology.html">生態</a></li>
-        <li><a href="japan.html" class="current">日本産種</a></li>
-        <li><a href="methods.html">採集法</a></li>
-        <li><a href="literature.html">文献</a></li>
-      </ul>
-    </nav>
-  </div>
+  <button class="hamburger" onclick="toggleSidebar()"><svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></button>
+  <a href="index.html" class="site-logo"><span class="logo-icon">P</span> Pselaphinae of Japan</a>
 </header>
-
-<section class="page-hero">
-  <div class="container">
-    <p class="taxon-path">トップ › 日本産種</p>
-    <h1>日本産アリヅカムシ類</h1>
-    <p class="subtitle">Japanese Fauna</p>
-  </div>
-</section>
-
-<main class="page-body">
-  <div class="container">
+<div class="layout">
+  <nav class="sidebar" id="sidebar">
+    <ul class="sidebar-nav">
+      <li><a href="index.html">Top</a></li>
+      <li class="sidebar-section">分類・形態</li>
+      <li><a href="taxonomy.html">分類体系</a></li>
+      <li><a href="morphology.html">形態的特徴</a></li>
+      <li class="sidebar-section">生態・分布</li>
+      <li><a href="ecology.html">生態と生物間相互作用</a></li>
+      <li><a href="japan.html" class="current">日本産種</a></li>
+      <li class="sidebar-section">調査・文献</li>
+      <li><a href="methods.html">採集・調査法</a></li>
+      <li><a href="literature.html">主要文献</a></li>
+    </ul>
+  </nav>
+  <div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
+  <main class="main"><div class="content">
+    <div class="page-title">
+      <h1>日本産アリヅカムシ類</h1>
+      <div class="sub">Japanese Fauna</div>
+    </div>
     <div class="prose">
-      <p>
-        日本産アリヅカムシ亜科は 83 属 326 種 23 亜種が記録されている（野村ほか, 2013）。日本列島の南北約 3,000 km にわたる温度勾配と、第四紀の海水面変動に伴う陸橋形成・消滅の歴史が、豊富な固有種を生み出した背景にある。
-      </p>
-      <p>
-        特にムネトゲアリヅカムシ上族 Batrisitae の多様化が顕著であり、野村 (1991) による <i>Batrisoplisus</i> 属群の大規模な分類学的改訂は、日本産アリヅカムシ研究の金字塔である。日本は東アジアにおける本群の多様性ホットスポットの一つに位置づけられる。
-      </p>
-      <p>
-        以下に各上族の代表属を示す。種数は 2013 年時点のものであり、その後の新種記載によりさらに増加しているものと推測される。
-      </p>
-
+      <p>日本産アリヅカムシ亜科は 83 属 326 種 23 亜種が記録されています（野村ほか, 2013）。日本列島の南北約 3,000 km にわたる温度勾配と、第四紀の海水面変動に伴う陸橋形成・消滅の歴史が、豊富な固有種を生み出した背景にあります。</p>
+      <p>特にムネトゲアリヅカムシ上族 Batrisitae の多様化が顕著で、野村 (1991) による <i>Batrisoplisus</i> 属群の大規模改訂は日本産アリヅカムシ研究の金字塔です。</p>
       <h2>代表属一覧</h2>
     </div>
-
     <div class="table-wrap">
       <table class="dtable">
-        <thead>
-          <tr>
-            <th>上族</th>
-            <th>属</th>
-            <th>和名</th>
-            <th>特記事項</th>
-          </tr>
-        </thead>
+        <thead><tr><th>上族</th><th>属</th><th>和名</th><th>特記事項</th></tr></thead>
         <tbody>
           <tr><td>Batrisitae</td><td class="it">Batrisodes</td><td>トゲアリヅカムシ属</td><td>日本産多種。雄二次性徴が著しく多様化</td></tr>
           <tr><td>Batrisitae</td><td class="it">Arthromelodes</td><td>ヒサゴアリヅカムシ属</td><td>日本固有属。一部の種は好蟻性</td></tr>
           <tr><td>Batrisitae</td><td class="it">Batriscenellus</td><td>チビムネトゲアリヅカムシ属</td><td>日本・中国・韓国・ロシア・インドに分布</td></tr>
           <tr><td>Batrisitae</td><td class="it">Physomerinus</td><td>モモコブアリヅカムシ属</td><td>腿節に特徴的な膨隆</td></tr>
-          <tr><td>Batrisitae</td><td class="it">Petaloscapus</td><td>ヒゲブトムネトゲアリヅカムシ属</td><td>触角第 1 節が幅広く扁平。8 種以上</td></tr>
+          <tr><td>Batrisitae</td><td class="it">Petaloscapus</td><td>ヒゲブトムネトゲアリヅカムシ属</td><td>触角第 1 節が幅広く扁平</td></tr>
           <tr><td>Goniaceritae</td><td class="it">Bryaxis</td><td>チビアリヅカムシ属</td><td>世界的大属。種同定に雄交尾器必須</td></tr>
           <tr><td>Euplectitae</td><td class="it">Euplectus</td><td>ナガアリヅカムシ属</td><td>リター層の普通種を含む。世界広布</td></tr>
           <tr><td>Pselaphitae</td><td class="it">Pselaphus</td><td>オノヒゲアリヅカムシ属</td><td>触角末端が斧状に変形</td></tr>
@@ -82,17 +57,14 @@
         </tbody>
       </table>
     </div>
-
     <nav class="page-nav">
       <div><span class="label">← 前</span><a href="ecology.html">生態</a></div>
       <div style="text-align:right;"><span class="label">次 →</span><a href="methods.html">採集法</a></div>
     </nav>
   </div>
-</main>
-
-<footer class="site-footer">
-  <p>本サイトはアリヅカムシ亜科の研究・学習のための情報提供を目的としています。</p>
-  <p class="copy">&copy; 2026 Pselaphinae of Japan</p>
-</footer>
+  <footer class="site-footer" style="margin-left:0;"><p>&copy; 2026 Pselaphinae of Japan. All Rights Reserved.</p></footer>
+  </main>
+</div>
+<script>function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('overlay').classList.toggle('open');}</script>
 </body>
 </html>

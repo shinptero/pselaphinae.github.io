@@ -4,126 +4,123 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pselaphinae of Japan — アリヅカムシ亜科</title>
-<meta name="description" content="日本産アリヅカムシ亜科（Pselaphinae）の分類・形態・生態に関する学術情報サイト">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+JP:wght@400;500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="site-header">
-  <div class="header-inner">
-    <div class="header-top">
-      <div>
-        <div class="site-title"><a href="index.html"><i>Pselaphinae</i> of Japan</a></div>
-        <div class="site-subtitle">アリヅカムシ亜科の分類・形態・生態</div>
-      </div>
-      <button class="menu-toggle" onclick="document.querySelector('.site-nav').classList.toggle('open')">Menu</button>
-    </div>
-    <nav class="site-nav">
-      <ul>
-        <li><a href="index.html" class="current">トップ</a></li>
-        <li><a href="taxonomy.html">分類体系</a></li>
-        <li><a href="morphology.html">形態</a></li>
-        <li><a href="ecology.html">生態</a></li>
-        <li><a href="japan.html">日本産種</a></li>
-        <li><a href="methods.html">採集法</a></li>
-        <li><a href="literature.html">文献</a></li>
-      </ul>
-    </nav>
-  </div>
+  <button class="hamburger" onclick="toggleSidebar()">
+    <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+  </button>
+  <a href="index.html" class="site-logo">
+    <span class="logo-icon">P</span>
+    Pselaphinae of Japan
+  </a>
 </header>
 
-<section class="page-hero hero-home">
-  <div class="container">
-    <p class="taxon-path">Arthropoda › Insecta › Coleoptera › Staphylinidae › Pselaphinae</p>
-    <h1>Subfamily <i>Pselaphinae</i> Latreille, 1802</h1>
-    <p class="subtitle">アリヅカムシ亜科</p>
-    <p class="lead">
-      ハネカクシ科に属する微小甲虫の大亜科。世界から約10,000種・1,250属以上が知られ、落葉層・土壌・朽木内・アリの巣など多様な微小環境に生息する。本サイトでは日本産種を中心に、分類・形態・生態の基礎情報を整理する。
-    </p>
-  </div>
-</section>
+<div class="layout">
+  <nav class="sidebar" id="sidebar">
+    <ul class="sidebar-nav">
+      <li><a href="index.html" class="current">Top</a></li>
+      <li class="sidebar-section">分類・形態</li>
+      <li><a href="taxonomy.html">分類体系</a></li>
+      <li><a href="morphology.html">形態的特徴</a></li>
+      <li class="sidebar-section">生態・分布</li>
+      <li><a href="ecology.html">生態と生物間相互作用</a></li>
+      <li><a href="japan.html">日本産種</a></li>
+      <li class="sidebar-section">調査・文献</li>
+      <li><a href="methods.html">採集・調査法</a></li>
+      <li><a href="literature.html">主要文献</a></li>
+    </ul>
+  </nav>
+  <div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
 
-<main class="page-body">
-  <div class="container">
-    <div class="prose">
-      <h2>概要</h2>
-      <p>
-        アリヅカムシ亜科 Pselaphinae Latreille, 1802 は、甲虫目ハネカクシ科（Staphylinidae）に属する極めて種多様性の高い亜科である。かつてはアリヅカムシ科 Pselaphidae として独立の科に置かれていたが、Newton & Thayer (1995) による系統解析に基づきハネカクシ科ヨツメハネカクシ群（Omaliine group）に位置づけられ、現在は亜科として広く認められている。
-      </p>
-      <p>
-        体長は多くの種で 1〜2 mm 程度、最小 0.5 mm から最大約 7 mm に達する。体色は淡褐色から暗褐色が主体である。落葉層・土壌・朽木といった有機物の蓄積した微小環境に普遍的に生息し、トビムシ類やダニ類などの微小無脊椎動物を捕食する。一部の種群はアリ類との共生関係（好蟻性）を発達させており、分類学・進化生物学・化学生態学の観点から高い学術的関心を集めてきた。
-      </p>
-      <p>
-        和名「アリヅカムシ（蟻塚虫）」はアリの巣から発見される種が多かったことに由来するが、実際には自由生活性の種が圧倒的に多い。本亜科の形態は極めて多様かつ精緻で、顕微鏡下での観察は昆虫形態学の醍醐味を実感させるものである。
-      </p>
+  <main class="main">
+    <div class="content">
+      <div class="page-title">
+        <h1>Pselaphinae of Japan</h1>
+        <div class="sub">日本産アリヅカムシ亜科の分類・形態・生態情報サイト</div>
+      </div>
+
+      <div class="prose">
+        <p>
+          アリヅカムシ亜科 Pselaphinae Latreille, 1802 は、甲虫目ハネカクシ科（Staphylinidae）に属する極めて種多様性の高い亜科です。かつてはアリヅカムシ科 Pselaphidae として独立の科に置かれていましたが、Newton & Thayer (1995) による系統解析に基づきハネカクシ科ヨツメハネカクシ群（Omaliine group）に位置づけられ、現在は亜科として広く認められています。
+        </p>
+        <p>
+          体長は多くの種で 1〜2 mm 程度、落葉層・土壌・朽木などの微小環境に普遍的に生息し、トビムシ類やダニ類を捕食します。一部の種群はアリ類との共生関係（好蟻性）を発達させており、分類学・進化生物学・化学生態学の観点から高い学術的関心を集めてきました。
+        </p>
+        <p>
+          本サイトでは日本産種を中心に、分類・形態・生態の基礎情報を整理しています。
+        </p>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-box">
+          <div class="stat-val">~10,000</div>
+          <div class="stat-label">世界既記載種数</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">1,250+</div>
+          <div class="stat-label">現生属数</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">326</div>
+          <div class="stat-label">日本産種数 *</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">0.5–7 mm</div>
+          <div class="stat-label">体長範囲</div>
+        </div>
+      </div>
+      <p style="font-size:0.75rem; color:var(--text-muted);">* 83属326種23亜種（野村ほか, 2013）</p>
+
+      <div class="prose">
+        <h3>最近の更新履歴</h3>
+      </div>
+      <div class="update-log">
+        <div class="update-item">
+          <div class="update-date">2026.3.2</div>
+          <div>サイトを公開しました。</div>
+        </div>
+      </div>
+
+      <div class="prose">
+        <h3>コンテンツ一覧</h3>
+      </div>
+      <div class="content-links">
+        <ul>
+          <li><a href="taxonomy.html">分類体系<span class="cl-desc">— 6上族の概要と系統</span></a></li>
+          <li><a href="morphology.html">形態的特徴<span class="cl-desc">— 触角・上翅・腹部・小窩系・雄交尾器</span></a></li>
+          <li><a href="ecology.html">生態と生物間相互作用<span class="cl-desc">— 捕食・好蟻性・固有性・洞窟適応</span></a></li>
+          <li><a href="japan.html">日本産種<span class="cl-desc">— 83属326種の概況と代表属</span></a></li>
+          <li><a href="methods.html">採集・調査法<span class="cl-desc">— ツルグレン・シフティング・FIT ほか</span></a></li>
+          <li><a href="literature.html">主要文献<span class="cl-desc">— 基幹文献リスト</span></a></li>
+        </ul>
+      </div>
+
+      <div class="prose" style="margin-top:2rem;">
+        <h3>お問い合わせ</h3>
+        <p>
+          本サイトに関するご意見・ご指摘は歓迎いたします。
+        </p>
+      </div>
     </div>
 
-    <div class="summary-box">
-      <div class="summary-item">
-        <div class="summary-val">~10,000</div>
-        <div class="summary-label">世界既記載種数</div>
-      </div>
-      <div class="summary-item">
-        <div class="summary-val">1,250+</div>
-        <div class="summary-label">現生属数</div>
-      </div>
-      <div class="summary-item">
-        <div class="summary-val">326</div>
-        <div class="summary-label">日本産種数 *</div>
-      </div>
-      <div class="summary-item">
-        <div class="summary-val">0.5–7 mm</div>
-        <div class="summary-label">体長範囲</div>
-      </div>
-    </div>
-    <p style="font-size:0.73rem; color:var(--text-muted);">* 83属326種23亜種（野村ほか, 2013）</p>
+    <footer class="site-footer" style="margin-left:0;">
+      <p>当サイトに掲載されている画像の無断転載はお断りいたします。</p>
+      <p>&copy; 2026 Pselaphinae of Japan. All Rights Reserved.</p>
+    </footer>
+  </main>
+</div>
 
-    <div class="prose" style="margin-top:2.5rem;">
-      <h2>コンテンツ</h2>
-    </div>
-
-    <div class="page-links">
-      <a href="taxonomy.html" class="page-link">
-        <span class="pl-num">§1</span>
-        <span class="pl-title">分類体系</span>
-        <span class="pl-desc">6上族の概要と高等アリヅカムシ類の系統</span>
-      </a>
-      <a href="morphology.html" class="page-link">
-        <span class="pl-num">§2</span>
-        <span class="pl-title">形態的特徴</span>
-        <span class="pl-desc">触角・上翅・腹部・小窩系・雄交尾器</span>
-      </a>
-      <a href="ecology.html" class="page-link">
-        <span class="pl-num">§3</span>
-        <span class="pl-title">生態</span>
-        <span class="pl-desc">捕食・好蟻性・固有性・洞窟適応</span>
-      </a>
-      <a href="japan.html" class="page-link">
-        <span class="pl-num">§4</span>
-        <span class="pl-title">日本産種</span>
-        <span class="pl-desc">83属326種の概況と代表属一覧</span>
-      </a>
-      <a href="methods.html" class="page-link">
-        <span class="pl-num">§5</span>
-        <span class="pl-title">採集法</span>
-        <span class="pl-desc">ツルグレン・シフティング・FIT ほか</span>
-      </a>
-      <a href="literature.html" class="page-link">
-        <span class="pl-num">§6</span>
-        <span class="pl-title">主要文献</span>
-        <span class="pl-desc">基幹文献リスト</span>
-      </a>
-    </div>
-  </div>
-</main>
-
-<footer class="site-footer">
-  <p>本サイトはアリヅカムシ亜科の研究・学習のための情報提供を目的としています。</p>
-  <p>記載内容は公刊文献に基づきますが、分類学的見解は研究の進展により変更される場合があります。</p>
-  <p class="copy">&copy; 2026 Pselaphinae of Japan</p>
-</footer>
+<script>
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('overlay').classList.toggle('open');
+}
+</script>
 </body>
 </html>

@@ -6,112 +6,75 @@
 <title>採集法 — Pselaphinae of Japan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+JP:wght@400;500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 <header class="site-header">
-  <div class="header-inner">
-    <div class="header-top">
-      <div>
-        <div class="site-title"><a href="index.html"><i>Pselaphinae</i> of Japan</a></div>
-        <div class="site-subtitle">アリヅカムシ亜科の分類・形態・生態</div>
-      </div>
-      <button class="menu-toggle" onclick="document.querySelector('.site-nav').classList.toggle('open')">Menu</button>
-    </div>
-    <nav class="site-nav">
-      <ul>
-        <li><a href="index.html">トップ</a></li>
-        <li><a href="taxonomy.html">分類体系</a></li>
-        <li><a href="morphology.html">形態</a></li>
-        <li><a href="ecology.html">生態</a></li>
-        <li><a href="japan.html">日本産種</a></li>
-        <li><a href="methods.html" class="current">採集法</a></li>
-        <li><a href="literature.html">文献</a></li>
-      </ul>
-    </nav>
-  </div>
+  <button class="hamburger" onclick="toggleSidebar()"><svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></button>
+  <a href="index.html" class="site-logo"><span class="logo-icon">P</span> Pselaphinae of Japan</a>
 </header>
-
-<section class="page-hero">
-  <div class="container">
-    <p class="taxon-path">トップ › 採集法</p>
-    <h1>採集・調査法</h1>
-    <p class="subtitle">Collecting Methods</p>
-  </div>
-</section>
-
-<main class="page-body">
-  <div class="container">
+<div class="layout">
+  <nav class="sidebar" id="sidebar">
+    <ul class="sidebar-nav">
+      <li><a href="index.html">Top</a></li>
+      <li class="sidebar-section">分類・形態</li>
+      <li><a href="taxonomy.html">分類体系</a></li>
+      <li><a href="morphology.html">形態的特徴</a></li>
+      <li class="sidebar-section">生態・分布</li>
+      <li><a href="ecology.html">生態と生物間相互作用</a></li>
+      <li><a href="japan.html">日本産種</a></li>
+      <li class="sidebar-section">調査・文献</li>
+      <li><a href="methods.html" class="current">採集・調査法</a></li>
+      <li><a href="literature.html">主要文献</a></li>
+    </ul>
+  </nav>
+  <div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
+  <main class="main"><div class="content">
+    <div class="page-title">
+      <h1>採集・調査法</h1>
+      <div class="sub">Collecting Methods</div>
+    </div>
     <div class="prose">
-      <p>
-        アリヅカムシ類は微小であるため、通常の昆虫採集法では十分に得られない。本亜科を対象とした調査には専用の手法が必要となる。定量的な群集調査にはツルグレン法とピットフォール法の併用が推奨される。以下に主要な手法を挙げる。
-      </p>
+      <p>アリヅカムシ類は微小であるため、通常の昆虫採集法では十分に得られません。定量的な群集調査にはツルグレン法とピットフォール法の併用が推奨されます。</p>
+      <h2>主要な手法</h2>
     </div>
-
-    <div class="method-list">
-      <div class="method-item">
-        <div>
-          <div class="method-name">ツルグレン装置</div>
-          <div class="method-en">Tullgren / Berlese funnel</div>
-        </div>
-        <div class="method-desc">落葉・土壌サンプルを漏斗上に置き、上方からの熱源による乾燥で微小節足動物を下方のアルコール瓶へ落下させる。リター層の定量的サンプリングに最適。ウィンクラー装置との組み合わせが効率的。</div>
-      </div>
-      <div class="method-item">
-        <div>
-          <div class="method-name">シフティング</div>
-          <div class="method-en">Litter sifting</div>
-        </div>
-        <div class="method-desc">篩を用いて落葉層から微細有機物と虫体を分離する野外手法。得られた篩い残しをウィンクラー装置に掛けるか、白色トレイ上で実体顕微鏡下にて直接拾い出す。</div>
-      </div>
-      <div class="method-item">
-        <div>
-          <div class="method-name">FIT トラップ</div>
-          <div class="method-en">Flight intercept trap</div>
-        </div>
-        <div class="method-desc">遮蔽板に衝突した飛翔昆虫を捕獲する。飛翔能力のある種の季節消長や日周活動パターンの定量的把握に有効。</div>
-      </div>
-      <div class="method-item">
-        <div>
-          <div class="method-name">ピットフォールトラップ</div>
-          <div class="method-en">Pitfall trap</div>
-        </div>
-        <div class="method-desc">地表面に埋設したカップで徘徊性種を捕獲。群集組成の経時的変化や生息密度の推定に有用。プロピレングリコールを保存液に用いれば DNA 解析にも対応可能。</div>
-      </div>
-      <div class="method-item">
-        <div>
-          <div class="method-name">アリの巣精査</div>
-          <div class="method-en">Ant nest searching</div>
-        </div>
-        <div class="method-desc">好蟻性種の採集には宿主アリのコロニーの直接調査が不可欠。巣材を白色トレイ上に広げ、吸虫管（アスピレーター）で個体を回収する。宿主アリの同定も併せて行う。</div>
-      </div>
-      <div class="method-item">
-        <div>
-          <div class="method-name">朽木割り出し</div>
-          <div class="method-en">Dead wood dissection</div>
-        </div>
-        <div class="method-desc">倒木・立枯れの樹皮下や材内部に生息する種を対象。ビーティング（枝叩き法）との併用も有効。</div>
-      </div>
+    <div class="method-item">
+      <div class="method-name">ツルグレン装置 <span class="method-en">Tullgren / Berlese funnel</span></div>
+      <div class="method-desc">落葉・土壌サンプルを漏斗上に置き、熱源による乾燥で微小節足動物を下方のアルコール瓶へ落下させる。リター層の定量的サンプリングに最適。ウィンクラー装置との組み合わせが効率的。</div>
     </div>
-
-    <div class="prose" style="margin-top:2.5rem;">
+    <div class="method-item">
+      <div class="method-name">シフティング <span class="method-en">Litter sifting</span></div>
+      <div class="method-desc">篩を用いて落葉層から微細有機物と虫体を分離する野外手法。ウィンクラー装置との併用が効率的。</div>
+    </div>
+    <div class="method-item">
+      <div class="method-name">FIT トラップ <span class="method-en">Flight intercept trap</span></div>
+      <div class="method-desc">遮蔽板に衝突した飛翔昆虫を捕獲する。飛翔能力のある種の季節消長や日周活動パターンの定量的把握に有効。</div>
+    </div>
+    <div class="method-item">
+      <div class="method-name">ピットフォールトラップ <span class="method-en">Pitfall trap</span></div>
+      <div class="method-desc">地表面に埋設したカップで徘徊性種を捕獲。プロピレングリコール保存液を用いれば DNA 解析にも対応可能。</div>
+    </div>
+    <div class="method-item">
+      <div class="method-name">アリの巣精査 <span class="method-en">Ant nest searching</span></div>
+      <div class="method-desc">好蟻性種の採集には宿主アリのコロニーの直接調査が不可欠。巣材を白色トレイ上に広げ、吸虫管で個体を回収する。宿主アリの同定も併せて行う。</div>
+    </div>
+    <div class="method-item">
+      <div class="method-name">朽木割り出し <span class="method-en">Dead wood dissection</span></div>
+      <div class="method-desc">倒木・立枯れの樹皮下や材内部に生息する種を対象。ビーティングとの併用も有効。</div>
+    </div>
+    <div class="prose" style="margin-top:2rem;">
       <h2>標本作製上の注意</h2>
-      <p>
-        微小種が多いため、台紙貼り標本（カードマウント）が主な保存法となる。水溶性接着剤を用い、体の左側面を台紙に固定することで、右側の形態を観察可能にする。雄交尾器の抜き出しと封入プレパラートの作製は、種同定において実質的に必須の工程である。KOH 処理後にグリセリン封入するのが一般的。
-      </p>
+      <p>微小種が多いため、台紙貼り標本（カードマウント）が主な保存法となります。水溶性接着剤を用い、体の左側面を台紙に固定することで右側の形態を観察可能にします。雄交尾器の抜き出しと封入プレパラートの作製は、種同定において実質的に必須の工程です。KOH 処理後にグリセリン封入するのが一般的です。</p>
     </div>
-
     <nav class="page-nav">
       <div><span class="label">← 前</span><a href="japan.html">日本産種</a></div>
       <div style="text-align:right;"><span class="label">次 →</span><a href="literature.html">主要文献</a></div>
     </nav>
   </div>
-</main>
-
-<footer class="site-footer">
-  <p>本サイトはアリヅカムシ亜科の研究・学習のための情報提供を目的としています。</p>
-  <p class="copy">&copy; 2026 Pselaphinae of Japan</p>
-</footer>
+  <footer class="site-footer" style="margin-left:0;"><p>&copy; 2026 Pselaphinae of Japan. All Rights Reserved.</p></footer>
+  </main>
+</div>
+<script>function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('overlay').classList.toggle('open');}</script>
 </body>
 </html>

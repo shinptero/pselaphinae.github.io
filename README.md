@@ -18,23 +18,6 @@ pselaphinae-site/
 └── README.md         ← この説明書
 ```
 
-## 公開手順（GitHub Pages）
+## 更新方法
 
-### ステップ1：リポジトリを作る
-1. GitHubにログイン → 右上の「+」→「New repository」
-2. リポジトリ名: 任意（例: `pselaphinae`）
-3. Public を選択
-4. 「Create repository」をクリック
-
-### ステップ2：ファイルをアップロードする
-1. 作成されたリポジトリのページで「アップロードする既存のファイル」をクリック
-2. このフォルダの中身すべてをドラッグ＆ドロップ
-   - index.html、taxonomy.html、morphology.html、ecology.html、japan.html、methods.html、literature.html
-   - css フォルダ（中の style.css ごと）
-3. 「Commit changes」をクリック
-
-### ステップ3：GitHub Pages を有効化する
-1. リポジトリの「Settings」タブ → 左メニューの「Pages」
-2. Source が「Deploy from a branch」、Branch が「main」になっていることを確認
-3. 「Save」をクリック
-4. 数分後に `https://ユーザー名.github.io/リポジトリ名/` で公開される
+GitHubリポジトリでファイルを直接編集するか、ローカルで編集してアップロードしてください。

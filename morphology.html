@@ -6,102 +6,67 @@
 <title>形態的特徴 — Pselaphinae of Japan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+JP:wght@400;500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 <header class="site-header">
-  <div class="header-inner">
-    <div class="header-top">
-      <div>
-        <div class="site-title"><a href="index.html"><i>Pselaphinae</i> of Japan</a></div>
-        <div class="site-subtitle">アリヅカムシ亜科の分類・形態・生態</div>
-      </div>
-      <button class="menu-toggle" onclick="document.querySelector('.site-nav').classList.toggle('open')">Menu</button>
-    </div>
-    <nav class="site-nav">
-      <ul>
-        <li><a href="index.html">トップ</a></li>
-        <li><a href="taxonomy.html">分類体系</a></li>
-        <li><a href="morphology.html" class="current">形態</a></li>
-        <li><a href="ecology.html">生態</a></li>
-        <li><a href="japan.html">日本産種</a></li>
-        <li><a href="methods.html">採集法</a></li>
-        <li><a href="literature.html">文献</a></li>
-      </ul>
-    </nav>
-  </div>
+  <button class="hamburger" onclick="toggleSidebar()"><svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></button>
+  <a href="index.html" class="site-logo"><span class="logo-icon">P</span> Pselaphinae of Japan</a>
 </header>
-
-<section class="page-hero">
-  <div class="container">
-    <p class="taxon-path">トップ › 形態的特徴</p>
-    <h1>形態的特徴</h1>
-    <p class="subtitle">Morphological Characters</p>
-  </div>
-</section>
-
-<main class="page-body">
-  <div class="container">
+<div class="layout">
+  <nav class="sidebar" id="sidebar">
+    <ul class="sidebar-nav">
+      <li><a href="index.html">Top</a></li>
+      <li class="sidebar-section">分類・形態</li>
+      <li><a href="taxonomy.html">分類体系</a></li>
+      <li><a href="morphology.html" class="current">形態的特徴</a></li>
+      <li class="sidebar-section">生態・分布</li>
+      <li><a href="ecology.html">生態と生物間相互作用</a></li>
+      <li><a href="japan.html">日本産種</a></li>
+      <li class="sidebar-section">調査・文献</li>
+      <li><a href="methods.html">採集・調査法</a></li>
+      <li><a href="literature.html">主要文献</a></li>
+    </ul>
+  </nav>
+  <div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
+  <main class="main"><div class="content">
+    <div class="page-title">
+      <h1>形態的特徴</h1>
+      <div class="sub">Morphological Characters</div>
+    </div>
     <div class="prose">
-      <p>
-        アリヅカムシ亜科はハネカクシ科の中でも形態的に特異なグループである。上翅（鞘翅）は短縮して腹部全体を覆わないが、他のハネカクシ亜科との最も明瞭な相違点は、腹部背板が互いに合着して可動性を欠くことである。他のハネカクシ類が腹部を自在に屈曲させるのに対し、本亜科では腹部は剛直である。
-      </p>
-      <p>
-        体表には微細な溝（sulcus）、小窩（fovea）、隆起線（carina）が発達し、その配置パターンは上族・族・属レベルの分類において最も重要な形質体系を成す。これらは体表腺の開口部と密接に関連すると考えられており、化学コミュニケーションとの関係が議論されている。
-      </p>
-      <p>
-        雄の二次性徴は極めて多様で、触角節の変形、頭部・前胸の突起、中脚・後脚の膨隆など、種ごとに固有の構造が見られる。これらは配偶行動に関与し、近縁種間の生殖隔離に寄与すると推定される。種の最終的な同定には雄交尾器（aedeagus）の精査がほぼ必須である。
-      </p>
-
+      <p>アリヅカムシ亜科はハネカクシ科の中でも形態的に特異なグループです。上翅（鞘翅）は短縮して腹部全体を覆いませんが、他のハネカクシ亜科との最も明瞭な相違点は、腹部背板が互いに合着して可動性を欠くことです。他のハネカクシ類が腹部を自在に屈曲させるのに対し、本亜科では腹部は剛直です。</p>
+      <p>体表には微細な溝（sulcus）、小窩（fovea）、隆起線（carina）が発達し、その配置パターンは上族・族・属レベルの分類で最重要の形質体系を成します。これらは体表腺の開口部と密接に関連すると考えられ、化学コミュニケーションとの関係が議論されています。</p>
+      <p>雄の二次性徴は極めて多様で、触角節の変形、頭部・前胸の突起、中脚・後脚の膨隆など、種ごとに固有の構造が見られます。種の最終同定には雄交尾器（aedeagus）の精査がほぼ必須です。</p>
       <h2>主要形質</h2>
     </div>
-
-    <div class="two-col">
-      <dl class="feat-dl">
-        <dt>触角 Antennae</dt>
-        <dd>通常 11 節。末端 1〜3 節が膨大しこん棒状（clavate）。Clavigeritae では 3 節に短縮。節の形状・比率が属の識別に不可欠。</dd>
-
-        <dt>上翅 Elytra</dt>
-        <dd>短縮し腹部を露出。基部に小窩（basal foveae）を持ち、その数（1〜3 対）と配列が上族の診断形質。</dd>
-
-        <dt>腹部 Abdomen</dt>
-        <dd>背板が合着し可動性を欠く。可視腹節数は通常 5〜6。各節の相対長と側縁の形状が分類に有用。</dd>
-      </dl>
-
-      <dl class="feat-dl">
-        <dt>跗節 Tarsi</dt>
-        <dd>跗節式は 2-2-2 または 3-3-3 が主体。爪は通常単一。偽付節（pseudosegment）を持つ群がある。</dd>
-
-        <dt>小窩・溝系 Foveae & sulci</dt>
-        <dd>頭頂・前胸・上翅基部・腹部に規則的に配置。最も体系的に利用される形質群。</dd>
-
-        <dt>雄交尾器 Aedeagus</dt>
-        <dd>種同定にほぼ必須。内袋構造（endophallus）が近縁種を区別する最終形質。</dd>
-      </dl>
-    </div>
-
-    <div class="prose" style="margin-top:2.5rem;">
+    <dl class="feat-dl">
+      <dt>触角 Antennae</dt>
+      <dd>通常 11 節。末端 1〜3 節が膨大しこん棒状（clavate）。Clavigeritae では 3 節に短縮。節の形状・比率が属の識別に不可欠。</dd>
+      <dt>上翅 Elytra</dt>
+      <dd>短縮し腹部を露出。基部に小窩（basal foveae）を持ち、その数（1〜3 対）と配列が上族の診断形質。</dd>
+      <dt>腹部 Abdomen</dt>
+      <dd>背板が合着し可動性を欠く。可視腹節数は通常 5〜6。各節の相対長と側縁の形状が分類に有用。</dd>
+      <dt>跗節 Tarsi</dt>
+      <dd>跗節式は 2-2-2 または 3-3-3 が主体。爪は通常単一。偽付節（pseudosegment）を持つ群がある。</dd>
+      <dt>小窩・溝系 Foveae & sulci</dt>
+      <dd>頭頂・前胸・上翅基部・腹部に規則的に配置。最も体系的に利用される形質群。</dd>
+      <dt>雄交尾器 Aedeagus</dt>
+      <dd>種同定にほぼ必須。内袋構造（endophallus）が近縁種を区別する最終形質。</dd>
+    </dl>
+    <div class="prose" style="margin-top:2rem;">
       <h2>他のハネカクシ類との識別</h2>
-      <p>
-        アリヅカムシ亜科と他のハネカクシ亜科を区別する最も実用的な形質は腹部の可動性である。採集した個体の腹部を軽くピンセットで押してみて、屈曲しなければ本亜科の可能性が高い。加えて、微小な体サイズ（多くは 2 mm 以下）、こん棒状の触角、短い上翅の基部に見える小窩、といった外見上の組み合わせで、実体顕微鏡下であれば比較的容易に亜科レベルの判定が可能である。
-      </p>
-      <p>
-        ただし、デオキノコムシ亜科（Scaphidiinae）やニセマキムシ亜科（Dasycerinae）など、同じくハネカクシ科に統合された旧独立科の一部は類似した外観を持つことがあるため、腹部構造の確認は重要である。
-      </p>
+      <p>採集した個体の腹部を軽くピンセットで押してみて屈曲しなければ本亜科の可能性が高いです。加えて、微小な体サイズ（多くは 2 mm 以下）、こん棒状の触角、短い上翅の基部に見える小窩、といった組み合わせで、実体顕微鏡下であれば比較的容易に亜科レベルの判定が可能です。</p>
     </div>
-
     <nav class="page-nav">
       <div><span class="label">← 前</span><a href="taxonomy.html">分類体系</a></div>
       <div style="text-align:right;"><span class="label">次 →</span><a href="ecology.html">生態</a></div>
     </nav>
   </div>
-</main>
-
-<footer class="site-footer">
-  <p>本サイトはアリヅカムシ亜科の研究・学習のための情報提供を目的としています。</p>
-  <p class="copy">&copy; 2026 Pselaphinae of Japan</p>
-</footer>
+  <footer class="site-footer" style="margin-left:0;"><p>&copy; 2026 Pselaphinae of Japan. All Rights Reserved.</p></footer>
+  </main>
+</div>
+<script>function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('overlay').classList.toggle('open');}</script>
 </body>
 </html>

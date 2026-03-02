@@ -6,93 +6,58 @@
 <title>主要文献 — Pselaphinae of Japan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+JP:wght@400;500;600&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 <header class="site-header">
-  <div class="header-inner">
-    <div class="header-top">
-      <div>
-        <div class="site-title"><a href="index.html"><i>Pselaphinae</i> of Japan</a></div>
-        <div class="site-subtitle">アリヅカムシ亜科の分類・形態・生態</div>
-      </div>
-      <button class="menu-toggle" onclick="document.querySelector('.site-nav').classList.toggle('open')">Menu</button>
-    </div>
-    <nav class="site-nav">
-      <ul>
-        <li><a href="index.html">トップ</a></li>
-        <li><a href="taxonomy.html">分類体系</a></li>
-        <li><a href="morphology.html">形態</a></li>
-        <li><a href="ecology.html">生態</a></li>
-        <li><a href="japan.html">日本産種</a></li>
-        <li><a href="methods.html">採集法</a></li>
-        <li><a href="literature.html" class="current">文献</a></li>
-      </ul>
-    </nav>
-  </div>
+  <button class="hamburger" onclick="toggleSidebar()"><svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></button>
+  <a href="index.html" class="site-logo"><span class="logo-icon">P</span> Pselaphinae of Japan</a>
 </header>
-
-<section class="page-hero">
-  <div class="container">
-    <p class="taxon-path">トップ › 主要文献</p>
-    <h1>主要文献</h1>
-    <p class="subtitle">Key Literature</p>
-  </div>
-</section>
-
-<main class="page-body">
-  <div class="container">
+<div class="layout">
+  <nav class="sidebar" id="sidebar">
+    <ul class="sidebar-nav">
+      <li><a href="index.html">Top</a></li>
+      <li class="sidebar-section">分類・形態</li>
+      <li><a href="taxonomy.html">分類体系</a></li>
+      <li><a href="morphology.html">形態的特徴</a></li>
+      <li class="sidebar-section">生態・分布</li>
+      <li><a href="ecology.html">生態と生物間相互作用</a></li>
+      <li><a href="japan.html">日本産種</a></li>
+      <li class="sidebar-section">調査・文献</li>
+      <li><a href="methods.html">採集・調査法</a></li>
+      <li><a href="literature.html" class="current">主要文献</a></li>
+    </ul>
+  </nav>
+  <div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
+  <main class="main"><div class="content">
+    <div class="page-title">
+      <h1>主要文献</h1>
+      <div class="sub">Key Literature</div>
+    </div>
     <div class="prose">
-      <p>
-        アリヅカムシ亜科の分類・系統・生態に関する基幹文献を掲げる。日本産種を扱ったものを中心に、世界規模の重要文献を含む。
-      </p>
+      <p>アリヅカムシ亜科の分類・系統・生態に関する基幹文献を掲げます。</p>
     </div>
-
     <div class="ref-list">
-      <div class="ref-item">
-        Parker, J. (2016) <span class="ref-title">Emergence of a superradiation: pselaphine rove beetles in mid-Cretaceous amber from Myanmar and their evolutionary implications.</span> <span class="ref-journal">Systematic Entomology</span>, 41: 541–566.
-      </div>
-      <div class="ref-item">
-        野村周平ほか (2013) <span class="ref-title">日本産ハネカクシ科総目録（昆虫綱：甲虫目）.</span> <span class="ref-journal">九州大学総合研究博物館研究報告</span>.
-      </div>
-      <div class="ref-item">
-        Löbl, I. & Besuchet, C. (2004) <span class="ref-title">Pselaphinae.</span> In: Löbl, I. & Smetana, A. (eds.), <span class="ref-journal">Catalogue of Palaearctic Coleoptera</span>, Vol. 2, pp. 272–329. Apollo Books, Stenstrup.
-      </div>
-      <div class="ref-item">
-        Chandler, D. S. (2001) <span class="ref-title">Biology, Morphology and Systematics of the Ant-like Litter Beetle Genera of Australia (Coleoptera: Staphylinidae: Pselaphinae).</span> <span class="ref-journal">Memoirs on Entomology, International</span>, 15: viii + 560 pp.
-      </div>
-      <div class="ref-item">
-        Newton, A. F. Jr. & Thayer, M. A. (1995) <span class="ref-title">Protopselaphinae new subfamily for <i>Protopselaphus</i> new genus from Malaysia, with a phylogenetic analysis and review of the Omaliine group of Staphylinidae including Pselaphidae.</span> In: Pakaluk, J. & Ślipiński, S. A. (eds.), <span class="ref-journal">Biology, Phylogeny, and Classification of Coleoptera</span>, pp. 219–320.
-      </div>
-      <div class="ref-item">
-        Nomura, S. (1991) <span class="ref-title">Systematic study on the genus <i>Batrisoplisus</i> and its allied genera from Japan (Coleoptera, Pselaphidae).</span> <span class="ref-journal">Esakia</span>, (30): 1–462.
-      </div>
-      <div class="ref-item">
-        De Marzo, L. (1988) <span class="ref-title">Revisione anatomica della larva di <i>Chennium bituberculatum</i> Latreille (Coleoptera, Pselaphidae).</span> <span class="ref-journal">Entomologica, Bari</span>, 23: 95–117.
-      </div>
-      <div class="ref-item">
-        De Marzo, L. (1986) <span class="ref-title">Osservazioni etologiche sulle larve di <i>Batrisodes oculatus</i> Aubé (Coleoptera, Pselaphidae).</span> <span class="ref-journal">Frustula Entomologica</span> (N.S.).
-      </div>
-      <div class="ref-item">
-        Jeannel, R. (1958) <span class="ref-title">Révision des Psélaphides du Japon.</span> <span class="ref-journal">Mémoires du Muséum National d'Histoire Naturelle</span> (N.S., Sér. A, Zoologie), 18: 1–138.
-      </div>
-      <div class="ref-item">
-        青木淳一 編著 (2015) <span class="ref-title">日本産土壌動物　分類のための図解検索【第二版】.</span> <span class="ref-journal">東海大学出版部</span>, 1684 pp.
-      </div>
+      <div class="ref-item">Parker, J. (2016) <span class="ref-title">Emergence of a superradiation: pselaphine rove beetles in mid-Cretaceous amber from Myanmar and their evolutionary implications.</span> <span class="ref-journal">Systematic Entomology</span>, 41: 541–566.</div>
+      <div class="ref-item">野村周平ほか (2013) <span class="ref-title">日本産ハネカクシ科総目録（昆虫綱：甲虫目）.</span> <span class="ref-journal">九州大学総合研究博物館研究報告</span>.</div>
+      <div class="ref-item">Löbl, I. & Besuchet, C. (2004) <span class="ref-title">Pselaphinae.</span> In: Löbl, I. & Smetana, A. (eds.), <span class="ref-journal">Catalogue of Palaearctic Coleoptera</span>, Vol. 2, pp. 272–329.</div>
+      <div class="ref-item">Chandler, D. S. (2001) <span class="ref-title">Biology, Morphology and Systematics of the Ant-like Litter Beetle Genera of Australia (Coleoptera: Staphylinidae: Pselaphinae).</span> <span class="ref-journal">Mem. Entomol. Int.</span>, 15: viii + 560 pp.</div>
+      <div class="ref-item">Newton, A. F. Jr. & Thayer, M. A. (1995) <span class="ref-title">Protopselaphinae new subfamily for <i>Protopselaphus</i> new genus from Malaysia, with a phylogenetic analysis and review of the Omaliine group of Staphylinidae.</span> In: Pakaluk & Ślipiński (eds.), <span class="ref-journal">Biology, Phylogeny, and Classification of Coleoptera</span>, pp. 219–320.</div>
+      <div class="ref-item">Nomura, S. (1991) <span class="ref-title">Systematic study on the genus <i>Batrisoplisus</i> and its allied genera from Japan.</span> <span class="ref-journal">Esakia</span>, (30): 1–462.</div>
+      <div class="ref-item">De Marzo, L. (1988) <span class="ref-title">Revisione anatomica della larva di <i>Chennium bituberculatum</i> Latreille.</span> <span class="ref-journal">Entomologica, Bari</span>, 23: 95–117.</div>
+      <div class="ref-item">De Marzo, L. (1986) <span class="ref-title">Osservazioni etologiche sulle larve di <i>Batrisodes oculatus</i> Aubé.</span> <span class="ref-journal">Frustula Entomologica</span> (N.S.).</div>
+      <div class="ref-item">Jeannel, R. (1958) <span class="ref-title">Révision des Psélaphides du Japon.</span> <span class="ref-journal">Mém. Mus. Natl. Hist. Nat.</span> (N.S., Sér. A, Zool.), 18: 1–138.</div>
+      <div class="ref-item">青木淳一 編著 (2015) <span class="ref-title">日本産土壌動物　分類のための図解検索【第二版】.</span> <span class="ref-journal">東海大学出版部</span>, 1684 pp.</div>
     </div>
-
     <nav class="page-nav">
       <div><span class="label">← 前</span><a href="methods.html">採集法</a></div>
-      <div style="text-align:right;"><span class="label">トップへ</span><a href="index.html">トップ</a></div>
+      <div style="text-align:right;"><span class="label">Topへ</span><a href="index.html">Top</a></div>
     </nav>
   </div>
-</main>
-
-<footer class="site-footer">
-  <p>本サイトはアリヅカムシ亜科の研究・学習のための情報提供を目的としています。</p>
-  <p class="copy">&copy; 2026 Pselaphinae of Japan</p>
-</footer>
+  <footer class="site-footer" style="margin-left:0;"><p>&copy; 2026 Pselaphinae of Japan. All Rights Reserved.</p></footer>
+  </main>
+</div>
+<script>function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open');document.getElementById('overlay').classList.toggle('open');}</script>
 </body>
 </html>
