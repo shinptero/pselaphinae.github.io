@@ -1,0 +1,562 @@
+/* ============================================
+   Pselaphinae of Japan — 共通スタイル
+   ============================================ */
+
+/* RESET */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --white: #ffffff;
+  --bg: #faf9f7;
+  --bg-alt: #f4f2ee;
+  --bg-table: #f7f6f3;
+  --border: #ddd8d0;
+  --border-light: #e8e4dc;
+  --text: #2c2c2c;
+  --text-sec: #555;
+  --text-muted: #888;
+  --accent: #7a3b10;
+  --accent-light: #9e5a2a;
+  --accent-bg: #f5efe8;
+  --link: #1a5276;
+  --link-hover: #0e3a54;
+  --serif: 'EB Garamond', 'Noto Serif JP', Georgia, serif;
+  --sans: 'Source Sans 3', 'Noto Serif JP', sans-serif;
+  --mono: 'IBM Plex Mono', monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: #d4c5a9; }
+
+a { color: var(--link); text-decoration: none; }
+a:hover { color: var(--link-hover); text-decoration: underline; }
+
+img { max-width: 100%; display: block; }
+
+/* ============================================
+   SITE HEADER
+   ============================================ */
+.site-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 1.2rem 2rem 0;
+}
+
+.header-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-bottom: 0.9rem;
+}
+
+.site-title a {
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-title a:hover { color: var(--accent); text-decoration: none; }
+.site-title i { color: var(--accent); }
+
+.site-subtitle {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* NAV */
+.site-nav {
+  border-top: 1px solid var(--border-light);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0;
+  white-space: nowrap;
+}
+
+.site-nav a {
+  display: block;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.8rem;
+  color: var(--text-sec);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.site-nav a:hover,
+.site-nav a.current {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  text-decoration: none;
+}
+
+/* Mobile menu */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.7rem;
+  font-size: 0.78rem;
+  color: var(--text-sec);
+  cursor: pointer;
+  font-family: var(--sans);
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.page-body {
+  padding: 3rem 0 4rem;
+}
+
+/* ============================================
+   PAGE HERO (top of each page)
+   ============================================ */
+.page-hero {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 3rem 0 2.5rem;
+}
+
+.page-hero.hero-home {
+  padding: 4.5rem 0 3.5rem;
+}
+
+.page-hero .container { max-width: 880px; }
+
+.taxon-path {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 1.2rem;
+}
+
+.page-hero h1 {
+  font-family: var(--serif);
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 0.25rem;
+}
+
+.page-hero h1 i { color: var(--accent); }
+
+.page-hero .subtitle {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--text-sec);
+  margin-bottom: 1.2rem;
+}
+
+.page-hero .lead {
+  max-width: 620px;
+  font-size: 0.95rem;
+  color: var(--text-sec);
+  line-height: 1.9;
+}
+
+/* ============================================
+   TYPOGRAPHY — prose
+   ============================================ */
+.prose {
+  max-width: 660px;
+  line-height: 1.95;
+}
+
+.prose p + p { margin-top: 1.15rem; }
+
+.prose h2 {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.prose h2:first-child { margin-top: 0; }
+
+.prose h3 {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin: 2rem 0 0.75rem;
+  color: var(--text);
+}
+
+/* ============================================
+   SUMMARY BOX (top page stats)
+   ============================================ */
+.summary-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+.summary-item {
+  background: var(--white);
+  padding: 1.1rem 1rem;
+  text-align: center;
+}
+
+.summary-val {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1.2;
+}
+
+.summary-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* ============================================
+   SUPERTRIBE LIST
+   ============================================ */
+.st-list { margin-top: 1.5rem; }
+
+.st-item {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--border-light);
+  display: grid;
+  grid-template-columns: 175px 1fr;
+  gap: 1.25rem;
+}
+.st-item:last-child { border-bottom: none; }
+
+.st-name {
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--accent);
+}
+
+.st-jp {
+  font-size: 0.8rem;
+  color: var(--text-sec);
+  margin-top: 0.1rem;
+}
+
+.st-desc {
+  font-size: 0.88rem;
+  color: var(--text-sec);
+  line-height: 1.8;
+}
+
+/* ============================================
+   DEFINITION LIST (morphology features)
+   ============================================ */
+.feat-dl dt {
+  font-family: var(--serif);
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-top: 1.2rem;
+}
+.feat-dl dt:first-child { margin-top: 0; }
+
+.feat-dl dd {
+  font-size: 0.88rem;
+  color: var(--text-sec);
+  line-height: 1.8;
+  margin-top: 0.15rem;
+}
+
+/* ============================================
+   DATA TABLE
+   ============================================ */
+.table-wrap {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border);
+}
+
+table.dtable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+}
+
+table.dtable thead { background: var(--bg-table); }
+
+table.dtable th {
+  padding: 0.65rem 0.9rem;
+  text-align: left;
+  font-size: 0.73rem;
+  font-weight: 600;
+  color: var(--text-sec);
+  letter-spacing: 0.03em;
+  border-bottom: 2px solid var(--border);
+  white-space: nowrap;
+}
+
+table.dtable td {
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: top;
+}
+
+table.dtable tbody tr:hover { background: var(--bg-table); }
+
+table.dtable .it { font-style: italic; }
+
+/* ============================================
+   ECO GRID (ecology page)
+   ============================================ */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 1.3rem;
+}
+
+.card h3 {
+  font-family: var(--serif);
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.card p {
+  font-size: 0.86rem;
+  color: var(--text-sec);
+  line-height: 1.8;
+}
+
+/* ============================================
+   METHOD LIST
+   ============================================ */
+.method-list { margin-top: 1.25rem; }
+
+.method-item {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 1.25rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--border-light);
+}
+.method-item:last-child { border-bottom: none; }
+
+.method-name {
+  font-family: var(--serif);
+  font-size: 0.93rem;
+  font-weight: 500;
+}
+
+.method-en {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.method-desc {
+  font-size: 0.88rem;
+  color: var(--text-sec);
+  line-height: 1.8;
+}
+
+/* ============================================
+   REFERENCE LIST
+   ============================================ */
+.ref-list {
+  margin-top: 1.25rem;
+  counter-reset: ref;
+}
+
+.ref-item {
+  padding: 0.5rem 0 0.5rem 2.4rem;
+  position: relative;
+  font-size: 0.86rem;
+  color: var(--text-sec);
+  line-height: 1.7;
+  counter-increment: ref;
+}
+
+.ref-item::before {
+  content: "[" counter(ref) "]";
+  position: absolute;
+  left: 0;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  top: 0.55rem;
+}
+
+.ref-title { color: var(--text); }
+.ref-journal { font-style: italic; }
+
+/* ============================================
+   TWO-COLUMN LAYOUT
+   ============================================ */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 1.25rem;
+}
+
+/* ============================================
+   NAV LINKS (prev/next at bottom of pages)
+   ============================================ */
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--border-light);
+  font-size: 0.85rem;
+}
+
+.page-nav a { color: var(--link); }
+.page-nav .label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer {
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  padding: 2rem 2rem;
+  text-align: center;
+}
+
+.site-footer p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.site-footer p + p { margin-top: 0.4rem; }
+
+.site-footer .copy {
+  margin-top: 1.2rem;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+}
+
+/* ============================================
+   HOME — page links grid
+   ============================================ */
+.page-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.page-link {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 1.3rem;
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.page-link:hover {
+  border-color: var(--accent-light);
+  background: var(--accent-bg);
+  text-decoration: none;
+}
+
+.page-link .pl-num {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.page-link .pl-title {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.page-link .pl-desc {
+  font-size: 0.78rem;
+  color: var(--text-sec);
+  line-height: 1.5;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .header-inner { padding: 1rem 1.25rem 0; }
+  .container { padding: 0 1.25rem; }
+  .page-hero .container { padding: 0 1.25rem; }
+  .page-hero { padding: 2.5rem 0 2rem; }
+  .page-hero.hero-home { padding: 3rem 0 2.5rem; }
+  .page-hero h1 { font-size: 1.8rem; }
+
+  .menu-toggle { display: block; }
+  .site-nav ul { display: none; }
+  .site-nav.open ul { display: flex; flex-wrap: wrap; }
+
+  .summary-box { grid-template-columns: 1fr 1fr; }
+  .two-col { grid-template-columns: 1fr; gap: 1.5rem; }
+  .card-grid { grid-template-columns: 1fr; }
+  .page-links { grid-template-columns: 1fr; }
+
+  .st-item { grid-template-columns: 1fr; gap: 0.3rem; }
+  .method-item { grid-template-columns: 1fr; gap: 0.25rem; }
+  .page-body { padding: 2rem 0 3rem; }
+}
+
+@media (max-width: 480px) {
+  .summary-box { grid-template-columns: 1fr; }
+}
